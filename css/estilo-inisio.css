@@ -1,0 +1,233 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-image: url(../imagenes/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+/* logo del la ZoEdDiCa */
+
+.logo {
+	width: 100%;
+	margin: auto;
+	margin-bottom: 10px;
+	display: block;
+}
+/***************************/
+
+/*inicio de seccion*/
+
+.login {
+	color: #fff;
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-family: sans-serif;
+	margin: auto;
+	margin-bottom: 70px;
+	margin-top: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10px #000;
+}
+.login h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.login label {
+	padding: 0;
+	margin: auto;
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	text-align: left;
+}
+.login input {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	height: 30px;
+	text-align: center;
+	font-size: 17px;
+	outline: none;
+	color: #fff;
+}
+.login input[type='text'],
+.login input[type='password'] {
+	border: 1px solid #000;
+	background: rgba(0, 0, 0, 0.3);
+}
+.login button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.alerta {
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+/******fin de inicio de seccion*********/
+
+/****pie de pagina****/
+
+.footer {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	color: #fff;
+	padding: 2px;
+	margin: auto auto 5px;
+	width: 95%;
+	text-align: right;
+}
+.UN {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #2961a9;
+}
+.UN:hover {
+	border-bottom: 1px solid #ffffff;
+}
+.menu-pie ul {
+	color: #fff;
+	margin: 0px;
+	list-style: none;
+	text-align: right;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+.menu-pie ul li a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #2961a9;
+}
+.menu-pie ul li a:hover {
+	border-bottom: 1px solid #ffffff;
+}
+.sub-pie ul {
+	color: #fff;
+	visibility: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+.menu-pie li:hover .sub-pie ul {
+	visibility: visible;
+	-webkit-transition-duration: 1000s;
+	transition-duration: 1000s;
+}
+.footer p {
+	text-align: center;
+	color: #fff;
+	margin: 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.footer .redesSS {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.redesSS a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 28px;
+	margin: 5px;
+	border-radius: 5px;
+}
+.facebook:hover {
+	color: #0024ff;
+	background: #fff;
+}
+.twitter:hover {
+	background: #018ffd;
+}
+.instagram:hover {
+	color: #fff;
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+}
+/****fin pie de pagina****/
+
+.enviar {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 24px;
+	border: 1px solid #002fff;
+	border-radius: 5px;
+	background: #5a72d1;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#5a72d1),
+		to(#001369)
+	);
+	background: -moz-linear-gradient(top, #5a72d1, #001369);
+	background: linear-gradient(to bottom, #5a72d1, #001369);
+	-webkit-box-shadow: #000000 0px 0px 13px 0px;
+	-moz-box-shadow: #000000 0px 0px 13px 0px;
+	box-shadow: #000000 0px 0px 13px 0px;
+	font: normal normal bold 18px arial;
+	color: #ffffff;
+	text-decoration: none;
+}
+.enviar:hover,
+.enviar:focus {
+	outline: none;
+	border: 1px solid #004bff;
+	background: #6c89fb;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#6c89fb),
+		to(#00177e)
+	);
+	background: -moz-linear-gradient(top, #6c89fb, #00177e);
+	background: linear-gradient(to bottom, #6c89fb, #00177e);
+	color: #ffffff;
+	text-decoration: none;
+}
+.enviar:active {
+	outline: none;
+	background: #36447d;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#36447d),
+		to(#001369)
+	);
+	background: -moz-linear-gradient(top, #36447d, #001369);
+	background: linear-gradient(to bottom, #36447d, #001369);
+}
+.borderPres:focus,
+.borderPres:active {
+	outline: none;
+}
+.M_error {
+	color: #ff0000;
+}
