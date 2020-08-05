@@ -1036,11 +1036,11 @@ button:focus {
 	color: var(--color_blanco);
 	background: var(--color_barra_sombreado);
 }
-.con_noticia textarea::-webkit-scrollbar {
+.con_noticia textarea {
 	width: 0.625em;
 	background: rgba(0, 0, 0, 0.829);
 }
-.con_noticia textarea::-webkit-scrollbar-thumb {
+.con_noticia textarea {
 	width: 0.3125rem;
 	border-right: 2px solid var(--color_slider_caption);
 	background: linear-gradient(
