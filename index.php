@@ -61,7 +61,7 @@ if (!empty($_SESSION['active'])) {
         <input type="password" id="clave" name="clave" placeholder="Clave" class="borderPres"></label>
       <div class="alerta"><?php echo isset($alert) ? $alert : ''; ?></div>
 
-      <button type="submit" class="enviar  borderPres"><i class="fas fa-check-circle"></i>&nbsp;Ingresar</button>
+      <button type="submit" class="botom">Ingresar&nbsp;<i class="fas fa-check-circle"></i></button>
     </form>
   </div>
 </body>

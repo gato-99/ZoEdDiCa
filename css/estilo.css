@@ -71,6 +71,67 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 /*fin loader*/
+/*inicio de seccion*/
+
+.login {
+	color: #fff;
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-family: sans-serif;
+	margin: auto;
+	margin-bottom: 70px;
+	margin-top: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 10px #000;
+}
+.login h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.login label {
+	padding: 0;
+	margin: auto;
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+	text-align: left;
+}
+.login input {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	height: 30px;
+	text-align: center;
+	font-size: 17px;
+	outline: none;
+	color: #fff;
+}
+.login input[type='text'],
+.login input[type='password'] {
+	border: 1px solid #000;
+	background: rgba(0, 0, 0, 0.3);
+}
+.login button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.alerta {
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+/******fin de inicio de seccion*********/
 /* logo del la ZoEdDiCa */
 
 .logo {
@@ -1463,61 +1524,6 @@ button:focus {
 }
 /****fin pie de pagina****/
 
-.BT_crear {
-	display: inline-block;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0.75rem 1.5rem;
-	border: 1px solid #002fff;
-	border-radius: 0.625rem;
-	background: #5a72d1;
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#5a72d1),
-		to(#001369)
-	);
-	background: -o-linear-gradient(top, #5a72d1, #001369);
-	background: linear-gradient(to bottom, #5a72d1, #001369);
-	-webkit-box-shadow: var(--color_negro) 000 0px 0px 13px 0px;
-	box-shadow: var(--color_negro) 000 0px 0px 13px 0px;
-	text-shadow: #1e274a -3px 2px 6px;
-	font: normal normal bold 1.25em arial;
-	color: var(--color_blanco);
-	text-decoration: none;
-}
-.BT_crear:hover,
-.BT_crear:focus {
-	outline: none;
-	border: 1px solid #004bff;
-	background: #6c89fb;
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#6c89fb),
-		to(#00177e)
-	);
-	background: -o-linear-gradient(top, #6c89fb, #00177e);
-	background: linear-gradient(to bottom, #6c89fb, #00177e);
-	color: var(--color_blanco);
-	text-decoration: none;
-}
-.BT_crear:active {
-	outline: none;
-	background: #36447d;
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#36447d),
-		to(#001369)
-	);
-	background: -o-linear-gradient(top, #36447d, #001369);
-	background: linear-gradient(to bottom, #36447d, #001369);
-}
-
 .cal_conte {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1696,3 +1702,31 @@ button:focus {
 	}
 }
 /* fin hacer responsiver */
+/* botones generales  */
+
+.botom {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.75rem 1.5rem;
+	border: 1px solid #002fff;
+	border-radius: 0.625rem;
+	background: #5a72d1;
+	background: linear-gradient(to bottom, #5a72d1, #001369);
+	box-shadow: var(--color_negro) 000 0px 0px 13px 0px;
+	text-shadow: #1e274a -3px 2px 6px;
+	font: normal normal bold 1.25em arial;
+	color: var(--color_blanco);
+	text-decoration: none;
+	justify-content: space-between;
+	cursor: pointer;
+} /* 
+.botom :hover {
+	border: 1px solid #004bff;
+	background: #6c89fb;
+
+	background: linear-gradient(to bottom, #6c89fb, #00177e);
+	color: var(--color_blanco);
+} */
+
+/* fin de botones generales  */

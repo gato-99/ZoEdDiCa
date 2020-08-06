@@ -88,74 +88,75 @@ else{
 <html lang="es-ES">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Modificación de Usuario</title>
-	<link rel="stylesheet" href="">
-	<?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Modificación de Usuario</title>
+  <link rel="stylesheet" href="">
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-	
+
   <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-		<!-- comienso del menu principal -->
-		<?php include "../funciones/barra_seccion.php";?>
-		<?php include "../funciones/barra.php";?>
-		<!-- final del menu principal -->
-		<section class="com_modificar">
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
+  <section class="com_modificar">
 
-			<div class="for_de_modificar">
-				<h1><i class="fas fa-user-edit colorp1"></i> Modificar Usuario</h1>
-				<hr>
+    <div class="for_de_modificar">
+      <h1><i class="fas fa-user-edit colorp1"></i> Modificar Usuario</h1>
+      <hr>
 
-				<form method="post" action="#">
-					<input type="hidden" name="id" value="<?php echo $id_user; ?>">
+      <form method="post" action="#">
+        <input type="hidden" name="id" value="<?php echo $id_user; ?>">
 
-					<label for="nom">Nombre</label>
-					<input type="text" name="nom" id="nom" placeholder="Nombre" value="<?php echo $nom_user; ?>">
+        <label for="nom">Nombre</label>
+        <input type="text" name="nom" id="nom" placeholder="Nombre" value="<?php echo $nom_user; ?>">
 
-					<label for="CI">CI</label>
-					<input type="text" name="ci" id="CI" placeholder="Ingrase CI" title="Solo numero de CI sin letras" required pattern="[0-9]{7,8}" value="<?php echo $ci; ?>">
+        <label for="CI">CI</label>
+        <input type="text" name="ci" id="CI" placeholder="Ingrase CI" title="Solo numero de CI sin letras" required
+          pattern="[0-9]{7,8}" value="<?php echo $ci; ?>">
 
-					<label for="user">Usuario</label>
-					<input type="text" name="user" id="user" placeholder="Usuario" value="<?php echo $user; ?>">
+        <label for="user">Usuario</label>
+        <input type="text" name="user" id="user" placeholder="Usuario" value="<?php echo $user; ?>">
 
-					<label for="clave">Contraseña</label>
-					<input type="password" name="clave" id="clave" placeholder="Contraseña">
+        <label for="clave">Contraseña</label>
+        <input type="password" name="clave" id="clave" placeholder="Contraseña">
 
-					<label for="rango">Rango</label>
+        <label for="rango">Rango</label>
 
-					<?php
+        <?php
 					include "../php/conexion-mysql/conexion.php" ;
 					$query_rol= mysqli_query($conection, "SELECT * FROM rol");
 					$resultado_rol= mysqli_num_rows($query_rol);
 					mysqli_close($conection);
 					?>
-					<select name="rol" id="rango" class="nodub">
-						<?php 
+        <select name="rol" id="rango" class="nodub">
+          <?php 
 						echo $option;
 						if ($resultado_rol > 0) {
 							while ($rol_id= mysqli_fetch_array($query_rol)) {
 								?>
-								<option value="<?php echo $rol_id['id'] ?>"><?php echo $rol_id['rol'] ?></option>
-								<?php
+          <option value="<?php echo $rol_id['id'] ?>"><?php echo $rol_id['rol'] ?></option>
+          <?php
 
 							}
 						} 
 						?>
-					</select>
-					<div class="alerta">
-						<?php echo isset($alert) ? $alert : ''; ?>
-					</div>
-					<center>
-						<button type="submit" class="BT_crear"><i class="far fa-save tamaño_icon"></i> Modificar</button>
-					</center>
-				</form>
-			</div>
+        </select>
+        <div class="alerta">
+          <?php echo isset($alert) ? $alert : ''; ?>
+        </div>
+        <center>
+          <button type="submit" class="BT_crear"><i class="far fa-save tamaño_icon"></i> Modificar</button>
+        </center>
+      </form>
+    </div>
 
-		</section>
+  </section>
 
-	
+
 </body>
 <?php
 include "../funciones/footer.php";

@@ -3,7 +3,6 @@
 <!-- estilo pagina y login -->
 <link rel="stylesheet" href="../css/estilo.css">
 <link rel="stylesheet" href="css/estilo.css">
-<link rel="stylesheet" href="css/estilo-inisio.css">
 <!-- fin estilo pagina y login -->
 <!-- iconos pagina, login -->
 <link rel="icon" type="imagen/png" href="../imagenes/icono.png">
