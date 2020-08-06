@@ -29,16 +29,15 @@ include "../php/conexion-mysql/conexion.php";
       <h1><i class="fas fa-users colorp1 fa-1x"></i>&nbsp; Usuarios registrados</h1><br>
     </div>
 
-      <form method="get" action="busqda-user.php" class="for_busqueda borderPres">
-        <fieldset>
-          <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
-          <button type="submit" class="bot_buscar borderPres"><i class="fas fa-search tamaño_icon"></i></button>
-        </fieldset>
-      </form>
-      <div class="conter_PDF">
-        <a href="../pagina-principal/PDF.php" class="PDF borderPres">Descargar PDF <i
-            class="fas fa-download CV"></i></a>
-    
+    <form method="get" action="busqda-user.php" class="for_busqueda borderPres">
+      <fieldset>
+        <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+        <button type="submit" class="bot_buscar borderPres"><i class="fas fa-search tamaño_icon"></i></button>
+      </fieldset>
+    </form>
+    <div class="conter_PDF">
+      <a href="../pagina-principal/PDF.php" class="botom botom--pdf">Descargar PDF <i class="fas fa-download CV"></i></a>
+
     </div>
     <table>
       <tr>
@@ -82,12 +81,12 @@ include "../php/conexion-mysql/conexion.php";
         <td><?php echo $data['rol']; ?></td>
         <td>
 
-          <a class="en_editar" href="modificacion_usuario.php?id=<?php echo $data['id_user']; ?>"><i
-              class="fas fa-edit"></i> Modificar</a>
+          <a class="botom botom--celi botom--pd" href="modificacion_usuario.php?id=<?php echo $data['id_user']; ?>">
+            Modificar <i class="fas fa-edit"></i></a>
 
           <?php if($data['id_user'] != 1 ){ ?>
-          <a class="en_eliminar" href="eliminar-user.php?id=<?php echo $data['id_user']; ?>"><i
-              class="fas fa-trash-alt"></i> Eliminar</a>
+          <a class="botom botom--eli botom--pd" href="eliminar-user.php?id=<?php echo $data['id_user']; ?>"> Eliminar <i
+              class="fas fa-trash-alt"></i></a>
           <?php } ?>
         </td>
       </tr>

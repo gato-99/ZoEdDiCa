@@ -13,7 +13,7 @@
 		<a class="UN" href="http://www.unexca.edu.ve/"> Universidad Nacional Experimental de la Gran Caracas – UNEXCA. </a>
 		<nav class="menu-pie">
 			<ul>
-				<li><a class="P" href="">&#40;Alumnos:&#41;</a>
+				<li><a  href="">&#40;Alumnos:&#41;</a>
 					<nav class="sub-pie">
 						<ul>
 							<li><a href="">&#40;José Esteves&#41;-</a></li>

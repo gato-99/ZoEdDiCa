@@ -51,40 +51,41 @@ if (empty($_REQUEST['id']) || $_REQUEST['id'] == 1) {
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Eliminar Usuario</title>
-    <?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Eliminar Usuario</title>
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-    
-    <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-    <!-- comienso del menu principal -->
-    <?php include "../funciones/barra_seccion.php";?>
-    <?php include "../funciones/barra.php";?>
-    <!-- final del menu principal -->
-    <section class="con_eliminar">
-        <h2 ><i class="fas fa-user-times colorp1"></i> ¿Desea eliminar el usuario?</h2>
-        <hr>
-        <div class="eliminar_use">
 
-            <p>Nombre: <span><?php echo $nombre_user; ?></span></p>
-            <p>CI de usuario: <span><?php echo $ci; ?></span></p>
-            <p>Usuario: <span><?php echo $user; ?></span></p>
-            <p>Tipo de usuario: <span><?php echo $rol; ?></span></p>
-            <form method="post" action="#">
-                <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
-                <a href="consulta-modifica-elimina.php" class="celi"><i class="far fa-caret-square-left tamaño_icon"></i> Cancelar</a>
-                <button type="submit" class="eli"><i class="far fa-trash-alt tamaño_icon"></i> Eliminar</button>
-            </form>
+  <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
+  <section class="con_eliminar">
+    <h2><i class="fas fa-user-times colorp1"></i> ¿Desea eliminar el usuario?</h2>
+    <hr>
+    <div class="eliminar_use">
 
-        </div>
+      <p>Nombre: <span><?php echo $nombre_user; ?></span></p>
+      <p>CI de usuario: <span><?php echo $ci; ?></span></p>
+      <p>Usuario: <span><?php echo $user; ?></span></p>
+      <p>Tipo de usuario: <span><?php echo $rol; ?></span></p>
+      <form method="post" action="#">
+        <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
+        <a href="consulta-modifica-elimina.php" class="botom botom--celi"><i
+            class="far fa-caret-square-left tamaño_icon"></i> Cancelar</a>
+        <button type="submit" class="botom botom--eli"><i class="far fa-trash-alt tamaño_icon"></i> Eliminar</button>
+      </form>
+
+    </div>
 
 
-    </section>
+  </section>
 
-    
+
 </body>
 <?php
 include "../funciones/footer.php";

@@ -61,32 +61,37 @@ include "../php/conexion-mysql/conexion.php";
          $foto = '../imagenes/' . $data['foto'];
        }
        ?>
-       <div class="contenedor_de_nocticias">
+      <div class="contenedor_de_nocticias">
         <h2><?php echo $data['titulo']; ?></h2>
         <hr>
         <center>
 
           <img src="<?php echo $foto; ?>" alt=""></center>
-          <p><?php echo $data['noticia']; ?></p>
-          <?php if ($_SESSION['rol'] == 1) {?>
-            <a class="noti_modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Modificar"><i class="fas fa-edit"></i> Modificar</a>
-            <a class="noti_eliminar" id="eli-mod" href="eliminar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Eliminar"><i class="far fa-trash-alt"></i> Eliminar</a>
-          <?php }if ($_SESSION['rol'] == 2) {?>
-            <a class="noti_modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Modificar"><i class="fas fa-edit"></i> Modificar</a>
-          <?php }?>
-        </div>
-        <?php
+        <p><?php echo $data['noticia']; ?></p>
+        <?php if ($_SESSION['rol'] == 1) {?>
+        <a class="botom botom--modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>"
+          title="Modificar"> Modificar <i class="fas fa-edit"></i></a>
+        <a class="botom botom--eliminar " id="eli-mod"
+          href="eliminar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Eliminar"> Eliminar <i
+            class="far fa-trash-alt"></i></a>
+        <?php }if ($_SESSION['rol'] == 2) {?>
+        <a class="botom botom--modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>"
+          title="Modificar">
+          Modificar <i class="fas fa-edit"></i></a>
+        <?php }?>
+      </div>
+      <?php
       }
     }
     ?>
-    <div class="pginador" >
-      <ul>
-        <?php
+      <div class="pginador">
+        <ul>
+          <?php
         if ($pagina != 1) {?>
           <li><a href="?pagina=<?php echo 1; ?>"><i class="fas fa-step-backward"></i></a></li>
           <li><a href="?pagina=<?php echo $pagina - 1; ?>"><i class="fas fa-backward"></i></a></li>
-        <?php }?>
-        <?php for ($i = $pmin; $i <= $pmax; $i++) {
+          <?php }?>
+          <?php for ($i = $pmin; $i <= $pmax; $i++) {
          if ($i == $pagina) {
           echo '<li class="pagsele">' . $i . '</li>';
         } else {
@@ -94,13 +99,13 @@ include "../php/conexion-mysql/conexion.php";
         }
       }
       ?>
-      <?php if ($pagina != $total_de_pagina) {?>
-        <li><a href="?pagina=<?php echo $pagina + 1; ?>"><i class="fas fa-forward"></i></a></li>
-        <li><a href="?pagina=<?php echo $total_de_pagina; ?>"><i class="fas fa-step-forward"></i></a></li>
-      <?php }?>
-    </ul>
-  </div>
-</div>
+          <?php if ($pagina != $total_de_pagina) {?>
+          <li><a href="?pagina=<?php echo $pagina + 1; ?>"><i class="fas fa-forward"></i></a></li>
+          <li><a href="?pagina=<?php echo $total_de_pagina; ?>"><i class="fas fa-step-forward"></i></a></li>
+          <?php }?>
+        </ul>
+      </div>
+    </div>
 
 
 </body>

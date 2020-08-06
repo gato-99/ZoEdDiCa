@@ -10,29 +10,29 @@ include "../php/conexion-mysql/conexion.php";
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Noticias recientes</title>
-    <?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Noticias recientes</title>
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-    
+
   <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-    <!-- comienso del menu principal -->
-    <?php include "../funciones/barra_seccion.php";?>
-    <?php include "../funciones/barra.php";?>
-    <!-- final del menu principal -->
-    <div class="noti_resi">
-        <h1><i class="far fa-newspaper tamaño_icon colorp1"></i> Noticias recientes</h1>
-        <form method="get" action="buscar_noticia.php" class="for_busqueda busqueda_noticia">
-            <fieldset>
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar...">
-                <button type="submit" class="bot_buscar"><i class="fas fa-search tamaño_icon"></i></button>
-            </fieldset>                   
-        </form>
-        <div class="con_noticia">
-            <?php
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
+  <div class="noti_resi">
+    <h1><i class="far fa-newspaper tamaño_icon colorp1"></i> Noticias recientes</h1>
+    <form method="get" action="buscar_noticia.php" class="for_busqueda busqueda_noticia">
+      <fieldset>
+        <input type="text" name="buscar" id="buscar" placeholder="Buscar...">
+        <button type="submit" class="bot_buscar"><i class="fas fa-search tamaño_icon"></i></button>
+      </fieldset>
+    </form>
+    <div class="con_noticia">
+      <?php
             $buscar = strtolower($_REQUEST['buscar']);
             if (empty($buscar)) {
                 header("location: buscar_noticia.php");
@@ -62,29 +62,33 @@ include "../php/conexion-mysql/conexion.php";
                         $foto = '../imagenes/' . $data['foto'];
                     }
                     ?>
-                    <div class="contenedor_de_nocticias">
-                        <h2><?php echo $data['titulo']; ?></h2>
-                        <hr>
-                        <center>
-                            <img src="<?php echo $foto; ?>" alt=""></center>
-                            <p><?php echo $data['noticia']; ?></p>
-                            <?php if ($_SESSION['rol'] == 1) {?>
-                    <a class="noti_modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Modificar"><i class="fas fa-edit"></i> Modificar</a>
-                    <a class="noti_eliminar" id="eli-mod" href="eliminar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Eliminar"><i class="far fa-trash-alt"></i> Eliminar</a>
-                            <?php }if($_SESSION['rol'] == 2){?>
+      <div class="contenedor_de_nocticias">
+        <h2><?php echo $data['titulo']; ?></h2>
+        <hr>
+        <center>
+          <img src="<?php echo $foto; ?>" alt=""></center>
+        <p><?php echo $data['noticia']; ?></p>
+        <?php if ($_SESSION['rol'] == 1) {?>
+        <a class="botom botom--modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>"
+          title="Modificar"> Modificar <i class="fas fa-edit"></i></a>
+        <a class="botom botom--eliminar" id="eli-mod" href="eliminar_noticia.php?id=<?php echo $data['id_noticias']; ?>"
+          title="Eliminar"> Eliminar <i class="far fa-trash-alt"></i></a>
+        <?php }if($_SESSION['rol'] == 2){?>
 
-                    <a class="noti_modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>" title="Modificar"><i class="fas fa-edit"></i> Modificar</a>
-                        </div>
-                        <?php 
+        <a class="botom botom--modi" href="modificar_noticia.php?id=<?php echo $data['id_noticias']; ?>"
+          title="Modificar"> Modificar <i class="fas fa-edit"></i></a>
+      </div>
+      <?php 
                     }
                     }
                 }
                 ?>
 
-            </div>
-        </div>
-    </body>
-    <?php
+    </div>
+  </div>
+</body>
+<?php
     include "../funciones/footer.php";
     ?>
-    </html>
+
+</html>

@@ -50,34 +50,34 @@ if (empty($_REQUEST['id'])) {
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Eliminar noticia</title>
-    <?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Eliminar noticia</title>
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-    
+
   <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-    <!-- comienso del menu principal -->
-    <?php include "../funciones/barra_seccion.php";?>
-    <?php include "../funciones/barra.php";?>
-    <!-- final del menu principal -->
-    <div class="con_eli">
-        <h2><i class="far fa-newspaper"></i> ¿Desea eliminar la noticia?</h2>
-        <hr>
-        <p class="titulo_noti"><?php echo $titulo; ?></p>
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
+  <div class="con_eli">
+    <h2><i class="far fa-newspaper"></i> ¿Desea eliminar la noticia?</h2>
+    <hr>
+    <p class="titulo_noti"><?php echo $titulo; ?></p>
 
-        <div class="imgen_noti"><img src="<?php echo $foto; ?>" alt=""></div>
+    <div class="imgen_noti"><img src="<?php echo $foto; ?>" alt=""></div>
 
-        <form method="post" action="#">
-            <input type="hidden" name="id_noticias" value="<?php echo $id_noticias; ?>">
-            <center>
-                <a href="ver_noticia.php" class="celi cancelar"><i class="far fa-caret-square-left tamaño_icon"></i> Cancelar</a>
-                <button type="submit" class="eli"><i class="far fa-trash-alt tamaño_icon"></i> Eliminar</button>
-            </center>
-        </form>
-    </div>
+    <form method="post" action="#">
+      <input type="hidden" name="id_noticias" value="<?php echo $id_noticias; ?>">
+      <center>
+        <a href="ver_noticia.php" class=" botom botom--celi"> Cancelar <i class="far fa-caret-square-left tamaño_icon"></i></a>
+        <button type="submit" class=" botom botom--eli"> Eliminar <i class="far fa-trash-alt tamaño_icon"></i></button>
+      </center>
+    </form>
+  </div>
 </body>
 <?php
 include "../funciones/footer.php";

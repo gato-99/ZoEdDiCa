@@ -80,7 +80,7 @@ if (!empty($_POST)) {
           <?php echo isset($alert) ? $alert : ''; ?>
         </div>
         <center>
-          <button type="submit" class="BT_crear"><i class="far fa-save tamaño_icon"></i> Crear usuario </button>
+          <button type="submit" class="botom"> Crear usuario <i class="far fa-save tamaño_icon"></i></button>
         </center>
       </form>
     </div>

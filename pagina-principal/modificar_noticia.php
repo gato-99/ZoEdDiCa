@@ -125,7 +125,7 @@ if (empty($_REQUEST['id'])){
 					</div>
 					<br>
 					<center>
-						<button type="submit" class="BT_crear bt_noti"><i class="far fa-newspaper"></i> Modificar noticia </button>
+						<button type="submit" class="botom">Modificar noticia <i class="far fa-newspaper"></i></button>
 					</center>
 				</form>
 			</div>

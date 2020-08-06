@@ -49,56 +49,57 @@ if (!empty($_POST)) {
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Publicar noticias</title>
-    
-    <?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Publicar noticias</title>
+
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-    
+
   <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-    <!-- comienso del menu principal -->
-    <?php include "../funciones/barra_seccion.php";?>
-    <?php include "../funciones/barra.php";?>
-    <!-- final del menu principal -->
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
 
-    <div class="for_de_noticias">
-        <h1><i class="far fa-newspaper colorp1"></i> &nbsp;Publica noticias</h1>
-        <hr>
-        <div class="con_noticia">
-            <form method="post" action="#" enctype="multipart/form-data">
-                <div class="alerta">
-                    <?php echo isset($alert) ? $alert : ''; ?>
-                </div>
-                <label for="titulo">Titulo:</label>
-                <input type="text" name="titulo" id="titulo" placeholder="Titulo" class="borderPres">
-
-                <label for="noticia">Noticia:</label>
-                <textarea name="noticia" id="summernote"></textarea>
-
-                <div class="photo">
-                    <input type="checkbox" name="" id="anadir-imgen">
-                    <label for="anadir-imgen"><i class="far fa-image"></i><i class="fas fa-plus icon-aco"></i> Añadir imagen:</label>
-                    <div class="prevPhoto">
-                        <span class="delPhoto notBlock"><i class="far fa-times-circle"></i></span>
-                        <label for="foto"></label></div>
-                        <div class="upimg"><input type="file" name="foto" id="foto"></div>
-                        <div id="form_alert"></div>
-                    </div>
-                    <br>
-                    <center>
-                        <button type="submit" class="BT_crear bt_noti"><i class="far fa-newspaper"></i> Publicar noticia </button>
-                    </center>
-                </form>
-            </div>
-
+  <div class="for_de_noticias">
+    <h1><i class="far fa-newspaper colorp1"></i> &nbsp;Publica noticias</h1>
+    <hr>
+    <div class="con_noticia">
+      <form method="post" action="#" enctype="multipart/form-data">
+        <div class="alerta">
+          <?php echo isset($alert) ? $alert : ''; ?>
         </div>
+        <label for="titulo">Titulo:</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Titulo" class="borderPres">
 
-    </body>
-    <?php
+        <label for="noticia">Noticia:</label>
+        <textarea name="noticia" id="summernote"></textarea>
+
+        <div class="photo">
+          <input type="checkbox" name="" id="anadir-imgen">
+          <label for="anadir-imgen"><i class="far fa-image"></i><i class="fas fa-plus icon-aco"></i> Añadir
+            imagen:</label>
+          <div class="prevPhoto">
+            <span class="delPhoto notBlock"><i class="far fa-times-circle"></i></span>
+            <label for="foto"></label></div>
+          <div class="upimg"><input type="file" name="foto" id="foto"></div>
+          <div id="form_alert"></div>
+        </div>
+        <br>
+        <center>
+          <button type="submit" class="botom"> Publicar noticia <i class="far fa-newspaper"></i></button>
+        </center>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+<?php
     include "../funciones/footer.php";
     ?>
 
-    </html>
+</html>

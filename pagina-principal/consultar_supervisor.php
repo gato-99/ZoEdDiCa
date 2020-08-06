@@ -10,42 +10,43 @@ include "../php/conexion-mysql/conexion.php";
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Consulta</title>
-    <?php include "../funciones/enlases.php";?>
+  <meta charset="UTF-8">
+  <title>Consulta</title>
+  <?php include "../funciones/enlases.php";?>
 </head>
 
 <body>
   <?php include "../funciones/loader.php"; ?>
-    
-    <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
-    <!-- comienso del menu principal -->
-    <?php include "../funciones/barra_seccion.php";?>
-    <?php include "../funciones/barra.php";?>
-    <!-- final del menu principal -->
-    <div class="con_edi_eli">
-        <div class="titulo_cee">
-            <h1><i class="fas fa-users colorp1 fa-1x"></i>&nbsp; Usuarios registrados</h1><br>
-        </div>
-        <form method="get" action="buscar_supervisor.php" class="for_busqueda borderPres">
-            <fieldset>
-                <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
-                <button type="submit" class="bot_buscar borderPres"><i class="fas fa-search tamaño_icon"></i></button>
-            </fieldset>
-        </form>
+
+  <img class="logo" src="../imagenes/logo.png" alt="imagen no carga" height="60px">
+  <!-- comienso del menu principal -->
+  <?php include "../funciones/barra_seccion.php";?>
+  <?php include "../funciones/barra.php";?>
+  <!-- final del menu principal -->
+  <div class="con_edi_eli">
+    <div class="titulo_cee">
+      <h1><i class="fas fa-users colorp1 fa-1x"></i>&nbsp; Usuarios registrados</h1><br>
+    </div>
+    <form method="get" action="buscar_supervisor.php" class="for_busqueda borderPres">
+      <fieldset>
+        <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+        <button type="submit" class="bot_buscar borderPres"><i class="fas fa-search tamaño_icon"></i></button>
+      </fieldset>
+    </form>
     <div class="conter_PDF">
-        <a href="../pagina-principal/PDF.php" class="PDF borderPres">Descargar PDF <i class="fas fa-download CV"></i></a>
-        </div>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>CI</th>
-                <th>Usuario</th>
-                <th>Rol</th>
-               
-            </tr>
-            <?php 
+      <a href="../pagina-principal/PDF.php" class="botom botom--pdf">Descargar PDF <i
+          class="fas fa-download CV"></i></a>
+    </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>CI</th>
+        <th>Usuario</th>
+        <th>Rol</th>
+
+      </tr>
+      <?php 
 //paginador
             $query_conteo = mysqli_query($conection,"SELECT COUNT(*) as conteo FROM iniciopn");
             $resultado_conteo=mysqli_fetch_array($query_conteo);
@@ -70,28 +71,28 @@ include "../php/conexion-mysql/conexion.php";
             if($resultado>0){
                 while($data=mysqli_fetch_array($query)){
                     ?>
-                    <tr>
-                        <td><?php echo $data['id_user']; ?></td>
-                        <td><?php echo $data['nombre_user']; ?></td>
-                        <td><?php echo $data['CI']; ?></td>
-                        <td><?php echo $data['nombre']; ?></td>
-                        <td><?php echo $data['rol']; ?></td>
-                    </tr>
-                    <?php   
+      <tr>
+        <td><?php echo $data['id_user']; ?></td>
+        <td><?php echo $data['nombre_user']; ?></td>
+        <td><?php echo $data['CI']; ?></td>
+        <td><?php echo $data['nombre']; ?></td>
+        <td><?php echo $data['rol']; ?></td>
+      </tr>
+      <?php   
                 }
             }
             ?>
-        </table>
-        <div class="pginador" id="pginador">
-            <ul>
-                <?php
+    </table>
+    <div class="pginador" id="pginador">
+      <ul>
+        <?php
                 if($pagina != 1){?>
-                    <li><a href="?pagina=<?php echo 1;?>"><i class="fas fa-step-backward"></i></a></li>
-                    <li><a href="?pagina=<?php echo $pagina-1;?>"><i class="fas fa-backward"></i></a></li>
-                <?php } ?>
-                <!-- <?php //echo'<li class="pagsele">'.$pagina.'/'.$total_de_pagina.'</li>';?> -->
-                
-                <?php for($i=$pmin; $i<=$pmax; $i++){
+        <li><a href="?pagina=<?php echo 1;?>"><i class="fas fa-step-backward"></i></a></li>
+        <li><a href="?pagina=<?php echo $pagina-1;?>"><i class="fas fa-backward"></i></a></li>
+        <?php } ?>
+        <!-- <?php //echo'<li class="pagsele">'.$pagina.'/'.$total_de_pagina.'</li>';?> -->
+
+        <?php for($i=$pmin; $i<=$pmax; $i++){
                     if($i == $pagina){
                         echo'<li class="pagsele">'.$i.'</li>';
                     }else{
@@ -100,13 +101,13 @@ include "../php/conexion-mysql/conexion.php";
                 }
                 ?>
 
-                <?php if($pagina != $total_de_pagina){?>
-                    <li><a href="?pagina=<?php echo $pagina+1;?>"><i class="fas fa-forward"></i></a></li>
-                    <li><a href="?pagina=<?php echo $total_de_pagina;?>"><i class="fas fa-step-forward"></i></a></li>
-                <?php } ?>
-            </ul>
-        </div>
+        <?php if($pagina != $total_de_pagina){?>
+        <li><a href="?pagina=<?php echo $pagina+1;?>"><i class="fas fa-forward"></i></a></li>
+        <li><a href="?pagina=<?php echo $total_de_pagina;?>"><i class="fas fa-step-forward"></i></a></li>
+        <?php } ?>
+      </ul>
     </div>
+  </div>
 </body>
 <?php
 include "../funciones/footer.php";

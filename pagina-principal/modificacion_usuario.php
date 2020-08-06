@@ -149,7 +149,7 @@ else{
           <?php echo isset($alert) ? $alert : ''; ?>
         </div>
         <center>
-          <button type="submit" class="BT_crear"><i class="far fa-save tamaño_icon"></i> Modificar</button>
+          <button type="submit" class="botom"> Modificar <i class="far fa-save tamaño_icon"></i></button>
         </center>
       </form>
     </div>
