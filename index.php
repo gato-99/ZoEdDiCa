@@ -53,7 +53,7 @@ if (!empty($_SESSION['active'])) {
   <?php include "funciones/loader.php"; ?>
   <img class="logo" src="imagenes/logo.png" alt="imagen no carga" height="60px">
   <div class="login">
-    <form method="post" action="">
+    <form method="post" action="" data-netlify="true">
       <h1>Login</h1>
       <label for="user"><i class="far fa-address-card"></i> Usuario:
         <input type="text" id="user" name="usuario" placeholder="Usuario" class="borderPres"></label>
