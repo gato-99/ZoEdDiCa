@@ -40,6 +40,8 @@ if (!empty($_SESSION['active'])) {
   <meta charset="UTF-8">
   <title>Inicio sección ZED.Capital</title>
   <?php include "funciones/enlases.php";?>
+<link rel="stylesheet" href="css/estilo.css">
+  
   <script>
   window.onload = function() {
     var contenedor = document.getElementById('con_sinbolo');
