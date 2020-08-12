@@ -18,7 +18,7 @@ if(!empty($_POST))
 		$nombre=$_POST['nom'];
 		$ci=$_POST['ci'];
 		$user=$_POST['user'];
-		$clave=$_POST['clave'];
+		$clave=md5($_POST['clave']);
 		$rol=$_POST['rol'];
 
 		$query= mysqli_query($conection, "SELECT * FROM iniciopn WHERE (CI = '$ci' AND id_user !=$id_user) OR (nombre = '$user' AND id_user !=$id_user)");
