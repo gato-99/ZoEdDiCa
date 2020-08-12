@@ -9,8 +9,8 @@ if (!empty($_SESSION['active'])) {
    $alert = "<p class='M_error'>Ingrese Usuario y Contraseña <i class='fas fa-times-circle'></i></p>";
 } else {
    require_once "php/conexion-mysql/conexion.php";
-   $user  = $_POST['usuario'];
-   $clave = $_POST['clave'];
+   $user  = mysqli_real_escape_string($conection,$_POST['usuario']);
+   $clave = md5(mysqli_real_escape_string($conection,$_POST['clave']));
 
    $query = mysqli_query($conection, "SELECT * FROM iniciopn WHERE nombre='$user' AND clave='$clave'");
    mysqli_close($conection);

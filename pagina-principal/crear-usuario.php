@@ -12,7 +12,7 @@ if (!empty($_POST)) {
         $nombre = $_POST['nom'];
         $ci     = $_POST['ci'];
         $user   = $_POST['user'];
-        $clave  = $_POST['clave'];
+        $clave  = md5($_POST['clave']);
         $rol    = $_POST['rol'];
         $query = mysqli_query($conection, "SELECT * FROM iniciopn WHERE CI = '$ci' OR nombre = '$user'");
         $resultado = mysqli_fetch_array($query);
