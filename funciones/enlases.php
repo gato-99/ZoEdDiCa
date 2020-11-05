@@ -9,11 +9,8 @@
 <!-- iconos pagina, login -->
 <link rel="icon" type="imagen/png" href="../imagenes/icono.png">
 <link rel="icon" type="imagen/png" href="imagenes/icono.png">
-<!-- <script type="text/javascript" src="../js/all.js"></script> -->
-<!-- <script type="text/javascript" src="js/all.js"></script> -->
-<link rel="stylesheet" href="../css/all.min.css">
-<link rel="stylesheet" href="css/all.min.css">
-
+<script type="text/javascript" src="../js/all.js"></script>
+<script type="text/javascript" src="js/all.js"></script>
 <!-- fin iconos pagina, login -->
 <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script><!-- slider y editor de noticia -->
 <script type="text/javascript" src="../js/jquery.flexslider.js"></script>
